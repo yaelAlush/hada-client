@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Menu } from "../models/menu.model";
-import { PopoverController } from "ionic-angular";
+import { PopoverController, ToastController } from "ionic-angular";
 import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
 import {Dish} from "../models/dish.model";
 
@@ -14,12 +14,13 @@ export class DishList implements OnInit{
 
 
   @Input() menu: Dish[];
-  constructor(public popoverCtrl: PopoverController) {
+  constructor(public popoverCtrl: PopoverController, public toastCtrl: ToastController) {
     console.log(this.menu);
   }
 
   ngOnInit(): void {
     this.menu.forEach(function(dish){
+      dish.rank = Math.round((dish.likedCount / dish.total) * 100);
       if(dish.rank >= 0 && dish.rank <30){
         dish.emoji ="/assets/emoji/unamused.png";
       }
@@ -45,6 +46,8 @@ export class DishList implements OnInit{
     setTimeout(function(){
       dish.swipedleft = false;
     },1000);
+    this.presentToast(10, false);
+
   }
   swiperight($event,dish){
     dish.liked = true;
@@ -52,5 +55,23 @@ export class DishList implements OnInit{
     setTimeout(function(){
       dish.swipedright = false;
     },1000);
+    this.presentToast(10, true);
+
+  }
+
+  presentToast(points, liked) {
+    var message;
+    if(liked){
+      message = "שמחים שאהבת :)"
+    } else{
+      message = "תודה על הדירוג!"
+    }
+    let toast = this.toastCtrl.create({
+      message: message + ' זכית ב-' + points + ' נקודות',
+      duration: 1500,
+      cssClass: 'points-toast'
+
+    });
+    toast.present();
   }
 }

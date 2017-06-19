@@ -4,7 +4,9 @@ export class Dish{
 	picture: string;
 	name: string;
 	description: string;
-	rank: number;
+  rank: number;
+  total: number;
+  likedCount: number;
 	type: DishType;
 	isGlat: boolean;
 	isVegan: boolean;

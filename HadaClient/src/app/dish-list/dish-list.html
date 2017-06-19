@@ -8,7 +8,7 @@
     <ion-thumbnail item-start>
       <img [src]="dish.picture">
     </ion-thumbnail>
-    <ion-grid>
+    <ion-grid class="dish-details">
       <ion-row>
         <ion-col>
           <h2>{{dish.name}}</h2>
@@ -17,6 +17,7 @@
         <ion-col class="emoji" align-self-center>
           <img [src]="dish.emoji" *ngIf="dish.emoji">
           <div class="dish-rank">{{dish.rank}}%</div>
+          <div class="dish-like-text">{{dish.liked}} of {{dish.total}} liked</div>
         </ion-col>
       </ion-row>
     </ion-grid>

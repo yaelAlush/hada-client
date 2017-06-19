@@ -136,3 +136,22 @@ keyframes slidingAnimationRight {
   font-size: 12px;
   font-weight: bold;
 }
+
+.dish-like-text{
+  font-size: 11px;
+}
+
+.dish-details ion-col{
+  max-width: 50%;
+}
+
+.dish-details p{
+  overflow: hidden;
+  white-space: initial;
+}
+
+.points-toast{
+  text-align: center;
+  direction: rtl;
+}
+
