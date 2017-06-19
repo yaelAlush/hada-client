@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { ViewController } from "ionic-angular";
 import { Dish } from "../models/dish.model";
-import { RankingItem } from "../models/ranking-item.model";
+import { MenuService } from "../menu.service";
+import { DishRanking } from "../models/dish-ranking.model";
 
 @Component({
   selector: 'dish-details-popup',
@@ -10,17 +11,11 @@ import { RankingItem } from "../models/ranking-item.model";
 export class DishDetailsPopupComponent {
   dishDetails: Dish;
   dishSegments: string = "details"
-  rankingList: RankingItem[];
+  rankingList: DishRanking;
 
-  constructor(public viewCtrl: ViewController) {
-    let data = this.viewCtrl.data;
-    this.dishDetails = data.dish;
-    this.rankingList = data.dishRanking.rankingItems;
-  }
-
-  close() {
-    let returnObject = { dishId: this.dishDetails.id, rankingItems: this.rankingList };
-    this.viewCtrl.dismiss(returnObject);
+  constructor(public viewCtrl: ViewController, private menuService: MenuService) {
+    this.dishDetails= this.viewCtrl.data;
+    this.rankingList = this.menuService.dishRanking.find(ranking=>ranking.dishId==this.dishDetails.id);
   }
 
   swipeleft($event, ingredient) {
@@ -29,6 +24,8 @@ export class DishDetailsPopupComponent {
     setTimeout(function () {
       ingredient.swipedleft = false;
     }, 1000);
+    let index=this.menuService.dishRanking.findIndex(ranking=>ranking.dishId==this.dishDetails.id)
+    this.menuService.dishRanking[index]=this.rankingList;
   }
 
   swiperight($event, ingredient) {
@@ -37,5 +34,7 @@ export class DishDetailsPopupComponent {
     setTimeout(function () {
       ingredient.swipedright = false;
     }, 1000);
+    let index=this.menuService.dishRanking.findIndex(ranking=>ranking.dishId==this.dishDetails.id)
+    this.menuService.dishRanking[index]=this.rankingList;
   }
 }

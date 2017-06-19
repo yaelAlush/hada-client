@@ -1,9 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from "../models/menu.model";
 import { PopoverController } from "ionic-angular";
 import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
-import { RankingItem } from "../models/ranking-item.model";
-import { DishRanking } from "../models/dish-ranking.model";
 import { Dish } from "../models/dish.model";
 
 @Component({
@@ -13,7 +10,6 @@ import { Dish } from "../models/dish.model";
 })
 export class DishList implements OnInit {
   @Input() menu: Dish[];
-  dishRanking: DishRanking[];
 
   constructor(public popoverCtrl: PopoverController) {
     console.log(this.menu);
@@ -31,28 +27,12 @@ export class DishList implements OnInit {
         dish.emoji = "/assets/emoji/heart.png";
       }
     });
-    
-    this.dishRanking = this.menu.map(dish => {
-      let defaultRanking = [new RankingItem("מלח"), new RankingItem("שומניות"), new RankingItem("יבש")];
-      let ingredients = dish.ingredients.map(ingredient => new RankingItem(ingredient));
-      return {
-        dishId: dish.id,
-        rankingItems: defaultRanking.concat(ingredients)
-      };
-    });
   }
 
   presentPopover(popupEvent, dish) {
-    let dishRanking = this.dishRanking.find(items => items.dishId == dish.id);
-    let popupData = { dish: dish, dishRanking: dishRanking };
-    let popover = this.popoverCtrl.create(DishDetailsPopupComponent, popupData);
+    let popover = this.popoverCtrl.create(DishDetailsPopupComponent, dish);
     popover.present({
       ev: popupEvent
-    });
-
-    popover.onDidDismiss(dishRanking => {
-      let index = this.dishRanking.findIndex(items => items.dishId == dishRanking.dishId);
-      this.dishRanking[index] = dishRanking;
     });
   }
 

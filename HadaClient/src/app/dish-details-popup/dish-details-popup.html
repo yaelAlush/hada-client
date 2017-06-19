@@ -25,7 +25,7 @@
   </ion-list>
   <ion-list *ngSwitchCase="'ranking'">
     <ion-list>
-      <ion-item *ngFor="let rankItem of rankingList"
+      <ion-item *ngFor="let rankItem of rankingList.rankingItems"
       class="ingredient-item"
             (swipeleft)="swipeleft($event, rankItem)"
             (swiperight)="swiperight($event, rankItem)"
