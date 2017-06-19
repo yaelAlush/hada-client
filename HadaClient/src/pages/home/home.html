@@ -5,16 +5,16 @@
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
- <ion-toolbar class="toolbar statusbar-padding" no-border-top="">
-      <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="kittens">
-      Kittens
-    </ion-segment-button>
-    <ion-segment-button value="puppies">
-      Puppies
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
+  <ion-toolbar class="toolbar statusbar-padding" no-border-top="">
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Puppies
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 
 </ion-header>
 
@@ -27,4 +27,8 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <!--<button ion-button icon-only (click)="presentPopover($event)">
+  <ion-icon name="popup"></ion-icon>
+</button>-->
 </ion-content>
