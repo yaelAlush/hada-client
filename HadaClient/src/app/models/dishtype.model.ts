@@ -1,4 +1,4 @@
-export enum DoseType{
+export enum DishType{
 	Salad,
 	Meat,
 	Vegitrain,
