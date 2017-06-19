@@ -1,16 +1,23 @@
 <div padding>
-  <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="puppies">
-      Puppies
+  <ion-segment [(ngModel)]="dishSegments">
+    <ion-segment-button value="details">
+      מידע
     </ion-segment-button>
-    <ion-segment-button value="kittens">
-      Kittens
+    <ion-segment-button value="ranking">
+      דירוג מתקדם
     </ion-segment-button>
   </ion-segment>
 </div>
 
-<div [ngSwitch]="pet">
-  <ion-list *ngSwitchCase="'puppies'">
+<div [ngSwitch]="dishSegments">
+  <ion-list *ngSwitchCase="'details'">
+    <ion-list>
+      <ion-list-header>{{dishDetails.name}} דירוג:{{dishDetails.rank}}</ion-list-header>
+      <img [src]="dishDetails.picture">
+      <div>מצרכים: {{dishDetails.name}}</div>
+    </ion-list>
+  </ion-list>
+  <ion-list *ngSwitchCase="'ranking'">
     <ion-list>
       <ion-list-header>{{dishDetails.name}} דירוג:{{dishDetails.rank}}</ion-list-header>
       <img [src]="dishDetails.picture">

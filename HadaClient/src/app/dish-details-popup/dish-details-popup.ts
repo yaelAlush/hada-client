@@ -9,7 +9,8 @@ import { Dish } from "../models/dish.model";
 export class DishDetailsPopupComponent {
 
   dishDetails: Dish;
-
+  dishSegments: string = "details"
+  
   constructor(public viewCtrl: ViewController) {
     // this.dishDetails = this.viewCtrl.data;
     this.dishDetails = new Dish();
