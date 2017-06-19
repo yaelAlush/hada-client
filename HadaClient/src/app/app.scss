@@ -127,7 +127,12 @@ keyframes slidingAnimationRight {
 .emoji{
   text-align: right;
 }
-.emoji img{
+
+.details-emoji{
+  text-align: center;
+}
+
+.emoji img, .details-emoji img{
   width: 25px;
   height: 25px;
 }
@@ -160,3 +165,10 @@ keyframes slidingAnimationRight {
    direction: rtl;
  }
 
+ .popover-content{
+   padding: 10px;
+ }
+
+ .popover-content .title{
+   text-align: center;
+ }

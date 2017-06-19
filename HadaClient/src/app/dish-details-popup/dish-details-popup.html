@@ -2,7 +2,10 @@
   <ion-title>
     {{dishDetails.name}}
   </ion-title>
-  דירוג:{{dishDetails.rank}}
+  <div class="details-emoji">
+    {{dishDetails.rank}}%
+    <img [src]="dishDetails.emoji">
+  </div>
 </div>
 
 <div>
