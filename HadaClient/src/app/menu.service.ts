@@ -13,13 +13,14 @@ export class MenuService {
     this.apiEndpoint = '/assets/menu.json';
   }
 
-  getMenu() {
+  getMenu(type:string) {
     var url = `${this.apiEndpoint}`;
     return this.http.get(url)
       .toPromise()
       .then(response => {
-        let menu = response.json() as Menu;
-        this.dishRanking = menu.dishes.map(dish => {
+        let menus = response.json() as Menu[];
+        let wantedMenu = menus.find(menu=>menu.type==type);
+        this.dishRanking = wantedMenu.dishes.map(dish => {
           let defaultRanking = [new RankingItem("מלח"), new RankingItem("שומניות"), new RankingItem("יבש")];
           let ingredients = dish.ingredients.map(ingredient => new RankingItem(ingredient));
           return {
@@ -27,7 +28,7 @@ export class MenuService {
             rankingItems: defaultRanking.concat(ingredients)
           };
         });
-        return menu;
+        return wantedMenu;
       }).catch(MenuService.handleError);
   }
 

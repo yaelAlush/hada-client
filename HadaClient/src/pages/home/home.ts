@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-    this.menuService.getMenu().then(menu => {
+    this.menuService.getMenu("Lunch").then(menu => {
       this.menu = menu;
       this.dishes = _.groupBy(menu.dishes, "type");
       console.log(this.dishes);

@@ -1,7 +1,153 @@
-{
+[{
   "id":1,
   "date":"21/06/2017",
   "type": "Breakfast",
+  "dishes":[
+    {
+      "id": 111,
+      "picture": "assets/dishes/chicken.jpg",
+      "name": "havita",
+      "description": "super havita",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 100,
+      "likedCount": 80,
+      "type": "Meat",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 222,
+      "picture": "assets/dishes/thina.jpg",
+      "name": "thina",
+      "description": "best thina!",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 200,
+      "likedCount": 40,
+      "type": "Salad",
+      "isGlat": false,
+      "isVegan": true,
+      "isGlutenFree": true
+    }
+  ,
+    {
+      "id": 333,
+      "picture": "assets/dishes/salad.jpg",
+      "name": "salad",
+      "description": "many fresh vegetables",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 100,
+      "likedCount": 75,
+      "type": "Salad",
+      "isGlat": true,
+      "isVegan": true,
+      "isGlutenFree": true
+    }
+  ,
+    {
+      "id": 444,
+      "picture": "assets/dishes/kebab.jpg",
+      "name": "kebab",
+      "description": "best kebab",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 2,
+      "likedCount": 2,
+      "type": "Meat",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 555,
+      "picture": "assets/dishes/memole.jpg",
+      "name": "memole",
+      "description": "memole like in home",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 127,
+      "likedCount": 34,
+      "type": "Meat",
+      "isGlat": true,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 666,
+      "picture": "assets/dishes/pashtida.jpg",
+      "name": "pashtida",
+      "description": "haftaha",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 100,
+      "likedCount": 89,
+      "type": "Vegitrain",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 777,
+      "picture": "assets/dishes/shniteltiras.jpg",
+      "name": "shnitzel tiras",
+      "description": "like you always wanted",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 400,
+      "likedCount": 400,
+      "type": "Vegitrain",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 888,
+      "picture": "assets/dishes/soup.jpg",
+      "name": "soup",
+      "description": "water",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 90,
+      "likedCount": 18,
+      "type": "Addition",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": true
+    },
+    {
+      "id": 999,
+      "picture": "assets/dishes/falafel.jpg",
+      "name": "falafel",
+      "description": "with many additions",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 14,
+      "likedCount": 2,
+      "type": "Pitiya",
+      "isGlat": true,
+      "isVegan": false,
+      "isGlutenFree": false
+    },
+    {
+      "id": 1010,
+      "picture": "assets/dishes/shawarma.jpg",
+      "name": "shawarma",
+      "description": "very tasty",
+      "ingredients": ["גזר","מלפפון","עגבניה"],
+      "total": 200,
+      "likedCount": 180,
+      "type": "Pitiya",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ]
+
+},
+
+{
+  "id":2,
+  "date":"21/06/2017",
+  "type": "Lunch",
   "dishes":[
     {
       "id": 111,
@@ -143,3 +289,11 @@
   ]
 
 }
+
+
+
+
+
+]
+
+
