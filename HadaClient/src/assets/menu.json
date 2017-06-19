@@ -1,0 +1,27 @@
+{
+  "id":1,
+  "date":"21/06/2017",
+  "type": "Breakfast",
+  "dishes":[
+    {"id": 321,
+      "picture": "bla bla bla",
+      "name": "shnitzel",
+      "description": "fries chicken",
+      "rank": 100,
+      "type": "Meat",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false}
+  ,
+    {"id": 456,
+      "picture": "asd",
+      "name": "soup",
+      "description": "water",
+      "rank": 50,
+      "type": "Addition",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": true}
+  ]
+
+}
