@@ -6,12 +6,9 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
  <ion-toolbar class="toolbar statusbar-padding" no-border-top="">
-      <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="kittens">
-      Kittens
-    </ion-segment-button>
-    <ion-segment-button value="puppies">
-      Puppies
+      <ion-segment [(ngModel)]="dishtype">
+       <ion-segment-button value="{{type}}" *ngFor="let type of dishtypes">
+      {{type}}
     </ion-segment-button>
   </ion-segment>
 </ion-toolbar>
@@ -25,6 +22,7 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
+  <!--<dish-list></dish-list>-->
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

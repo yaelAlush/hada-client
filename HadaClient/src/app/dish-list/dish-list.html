@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item *ngFor="let dish of menu.dishes">
+    <ion-thumbnail item-start>
+      <img [src]="dish.picture">
+    </ion-thumbnail>
+    <h2>{{dish.name}}</h2>
+    <p>{{dish.description}}</p>
+  </ion-item>
+</ion-list>
