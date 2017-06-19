@@ -25,8 +25,12 @@
   </ion-list>
   <ion-list *ngSwitchCase="'ranking'">
     <ion-list>
-      <ion-item *ngFor="let rankItem of rankingList">
-        {{rankItem}}
+      <ion-item *ngFor="let rankItem of rankingList"
+      class="ingredient-item"
+            (swipeleft)="swipeleft($event, rankItem)"
+            (swiperight)="swiperight($event, rankItem)"
+            [ngClass]="{'itemSlidingAnimationRight': rankItem.liked && rankItem.swipedright,'itemSlidingAnimation': rankItem.liked == false && rankItem.swipedleft, 'liked': rankItem.liked, 'dislike': rankItem.liked == false}">
+        {{rankItem.name}}
       </ion-item>
     </ion-list>
   </ion-list>

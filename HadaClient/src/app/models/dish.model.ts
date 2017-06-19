@@ -1,5 +1,5 @@
-import {DishType} from './dishtype.model';
-export class Dish{
+import { DishType } from './dishtype.model';
+export class Dish {
 	id: number;
 	picture: string;
 	name: string;
