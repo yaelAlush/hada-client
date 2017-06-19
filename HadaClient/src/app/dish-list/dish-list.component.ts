@@ -10,6 +10,6 @@ import {Menu} from "../models/menu.model";
 export class DishList {
   @Input() menu: Menu;
   constructor() {
-
+    console.log(this.menu);
   }
 }

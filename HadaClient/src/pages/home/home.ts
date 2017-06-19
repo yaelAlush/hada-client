@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {MenuService} from "../../app/menu.service";
-//import {DishTypes} from '../../app/models/dishtypes.model';
+import _ from "lodash";
 
 @Component({
   selector: 'page-home',
@@ -10,6 +10,8 @@ import {MenuService} from "../../app/menu.service";
 export class HomePage implements OnInit{
 	public dishtypes :string[];
 	public dishtype: string;
+	public menu;
+	public dishes;
 
   constructor(public navCtrl: NavController, private menuService: MenuService) {
   	this.dishtypes = ["Salad","Meat","Vegitrain","Pitiya","Addition"];
@@ -17,9 +19,12 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit(){
-    this.menuService.getMenu().then(function(menu){
-      console.log(menu);
-    })
+    this.menuService.getMenu().then(menu =>
+    {
+      this.menu = menu;
+      this.dishes= _.groupBy(menu.dishes, "type");
+      console.log(this.dishes);
+    });
   }
 
 }

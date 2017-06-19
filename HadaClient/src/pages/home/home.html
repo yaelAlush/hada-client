@@ -16,13 +16,21 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-  <!--<dish-list></dish-list>-->
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div [ngSwitch]="dishtype" *ngIf="dishes">
+    <ion-list *ngSwitchCase="'Meat'">
+      <dish-list [menu]="dishes['Meat']"></dish-list>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Addition'">
+      <dish-list [menu]="dishes['Addition']"></dish-list>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Salad'">
+      <dish-list [menu]="dishes['Salad']"></dish-list>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Vegitrain'">
+      <dish-list [menu]="dishes['Vegitrain']"></dish-list>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Pitiya'">
+      <dish-list [menu]="dishes['Pitiya']"></dish-list>
+    </ion-list>
+  </div>
 </ion-content>

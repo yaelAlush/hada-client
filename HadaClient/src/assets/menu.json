@@ -3,25 +3,123 @@
   "date":"21/06/2017",
   "type": "Breakfast",
   "dishes":[
-    {"id": 321,
-      "picture": "bla bla bla",
+    {
+      "id": 111,
+      "picture": "assets/dishes/chicken.jpg",
       "name": "shnitzel",
       "description": "fries chicken",
       "rank": 100,
       "type": "Meat",
       "isGlat": false,
       "isVegan": false,
-      "isGlutenFree": false}
+      "isGlutenFree": false
+    }
   ,
-    {"id": 456,
-      "picture": "asd",
+    {
+      "id": 222,
+      "picture": "assets/dishes/thina.jpg",
+      "name": "thina",
+      "description": "best thina!",
+      "rank": 100,
+      "type": "Salad",
+      "isGlat": false,
+      "isVegan": true,
+      "isGlutenFree": true
+    }
+  ,
+    {
+      "id": 333,
+      "picture": "assets/dishes/salad.jpg",
+      "name": "salad",
+      "description": "many fresh vegetables",
+      "rank": 100,
+      "type": "Salad",
+      "isGlat": true,
+      "isVegan": true,
+      "isGlutenFree": true
+    }
+  ,
+    {
+      "id": 444,
+      "picture": "assets/dishes/kebab.jpg",
+      "name": "kebab",
+      "description": "best kebab",
+      "rank": 100,
+      "type": "Meat",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 555,
+      "picture": "assets/dishes/memole.jpg",
+      "name": "memole",
+      "description": "memole like in home",
+      "rank": 100,
+      "type": "Meat",
+      "isGlat": true,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 666,
+      "picture": "assets/dishes/pashtida.jpg",
+      "name": "pashtida",
+      "description": "haftaha",
+      "rank": 100,
+      "type": "Vegitrain",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 777,
+      "picture": "assets/dishes/shniteltiras.jpg",
+      "name": "shnitzel tiras",
+      "description": "like you always wanted",
+      "rank": 100,
+      "type": "Vegitrain",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
+  ,
+    {
+      "id": 888,
+      "picture": "assets/dishes/soup.jpg",
       "name": "soup",
       "description": "water",
       "rank": 50,
       "type": "Addition",
       "isGlat": false,
       "isVegan": false,
-      "isGlutenFree": true}
+      "isGlutenFree": true
+    },
+    {
+      "id": 999,
+      "picture": "assets/dishes/falafel.jpg",
+      "name": "falafel",
+      "description": "with many additions",
+      "rank": 50,
+      "type": "Pitiya",
+      "isGlat": true,
+      "isVegan": false,
+      "isGlutenFree": false
+    },
+    {
+      "id": 1010,
+      "picture": "assets/dishes/shawarma.jpg",
+      "name": "shawarma",
+      "description": "very tasty",
+      "rank": 50,
+      "type": "Pitiya",
+      "isGlat": false,
+      "isVegan": false,
+      "isGlutenFree": false
+    }
   ]
 
 }
