@@ -1,5 +1,10 @@
-<ion-list *ngIf="menu">
-  <ion-item *ngFor="let dish of menu" (click)="presentPopover($event,dish)">
+<ion-list *ngIf="menu" class="menu">
+  <ion-item *ngFor="let dish of menu"
+            class="dish-item"
+            (swipeleft)="swipeleft($event, dish)"
+            (swiperight)="swiperight($event, dish)"
+            [ngClass]="{'itemSlidingAnimationRight': dish.liked && dish.swipedright,'itemSlidingAnimation': dish.liked == false && dish.swipedleft, 'liked': dish.liked, 'dislike': dish.liked == false}"
+            (click)="presentPopover($event,dish)">
     <ion-thumbnail item-start>
       <img [src]="dish.picture">
     </ion-thumbnail>

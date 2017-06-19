@@ -21,4 +21,19 @@ export class DishList {
       ev: popupEvent
     });
   }
+
+  swipeleft($event,dish){
+    dish.liked=false;
+    dish.swipedleft = true;
+    setTimeout(function(){
+      dish.swipedleft = false;
+    },1000);
+  }
+  swiperight($event,dish){
+    dish.liked = true;
+    dish.swipedright = true;
+    setTimeout(function(){
+      dish.swipedright = false;
+    },1000);
+  }
 }

@@ -14,3 +14,112 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@-webkit-keyframes slidingAnimation {
+  0% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  50% {
+    transform: translate3d(-70px,0,0);
+    -webkit-transform: translate3d(-70px,0,0);
+  }
+
+  100% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+keyframes slidingAnimation {
+  0% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  50% {
+    transform: translate3d(-70px,0,0);
+    -webkit-transform: translate3d(-70px,0,0);
+  }
+
+  100% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+
+@-webkit-keyframes slidingAnimationRight {
+  0% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  50% {
+    transform: translate3d(70px,0,0);
+    -webkit-transform: translate3d(70px,0,0);
+  }
+
+  100% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+keyframes slidingAnimationRight {
+  0% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  50% {
+    transform: translate3d(70px,0,0);
+    -webkit-transform: translate3d(70px,0,0);
+  }
+
+  100% {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+.itemSlidingAnimation {
+  -webkit-animation: slidingAnimation;
+  animation: slidingAnimation;
+  -webkit-animation-duration: 1000ms;
+  animation-duraton: 1000ms;
+}
+
+.itemSlidingAnimationRight {
+  -webkit-animation: slidingAnimationRight;
+  animation: slidingAnimationRight;
+  -webkit-animation-duration: 1000ms;
+  animation-duraton: 1000ms;
+}
+
+.liked{
+  border: 1px solid;
+  border-color: #32db64 !important;
+  border-radius: 10px;
+  background-color: #dcffd2;
+}
+
+.dislike{
+  border: 1px solid;
+  border-color: #e13838 !important;
+  border-radius: 10px;
+  background-color: #ffd2d2;
+}
+
+.menu img{
+  border-radius: 10px;
+}
+
+.dish-item{
+  margin: 10px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+.list-md .item-block .item-inner {
+  border-bottom: 0px !important;
+}
