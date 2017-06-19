@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
-import {Menu} from "../models/menu.model";
+import { Menu } from "../models/menu.model";
+import { PopoverController } from "ionic-angular";
+import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
 
 
 @Component({
@@ -9,8 +11,15 @@ import {Menu} from "../models/menu.model";
 })
 export class DishList {
   @Input() menu: Menu;
-  constructor() {
+  constructor(public popoverCtrl: PopoverController) {
     console.log(this.menu);
+  }
+
+  presentPopover(popupEvent,dish) {
+    let popover = this.popoverCtrl.create(DishDetailsPopupComponent,dish);
+    popover.present({
+      ev: popupEvent
+    });
   }
 
   swipeleft($event,dish){
@@ -28,4 +37,3 @@ export class DishList {
     },1000);
   }
 }
-
