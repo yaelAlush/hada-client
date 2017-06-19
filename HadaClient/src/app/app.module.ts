@@ -10,6 +10,7 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DishDetailsPopupComponent } from './dish-details-popup/dish-details-popup';
 
 import { DishList } from '../app/dish-list/dish-list.component';
 import {MenuService} from "./menu.service";
@@ -19,6 +20,7 @@ import {MenuService} from "./menu.service";
     MyApp,
     HomePage,
     ListPage,
+    DishDetailsPopupComponent,
     DishList
   ],
   imports: [
@@ -31,7 +33,8 @@ import {MenuService} from "./menu.service";
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DishDetailsPopupComponent
   ],
   providers: [
     StatusBar,

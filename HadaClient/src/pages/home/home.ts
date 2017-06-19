@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController ,PopoverController} from 'ionic-angular';
 import {MenuService} from "../../app/menu.service";
 import _ from "lodash";
+import { DishDetailsPopupComponent } from "../../app/dish-details-popup/dish-details-popup";
+//import {DishTypes} from '../../app/models/dishtypes.model';
 
 @Component({
   selector: 'page-home',
@@ -13,7 +15,7 @@ export class HomePage implements OnInit{
 	public menu;
 	public dishes;
 
-  constructor(public navCtrl: NavController, private menuService: MenuService) {
+  constructor(public navCtrl: NavController, private menuService: MenuService,public popoverCtrl: PopoverController) {
   	this.dishtypes = ["Salad","Meat","Vegitrain","Pitiya","Addition"];
   	this.dishtype = "Meat";
   }
@@ -24,6 +26,13 @@ export class HomePage implements OnInit{
       this.menu = menu;
       this.dishes= _.groupBy(menu.dishes, "type");
       console.log(this.dishes);
+    });
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(DishDetailsPopupComponent,{hello:"sss"});
+    popover.present({
+      ev: myEvent
     });
   }
 
