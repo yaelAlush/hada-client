@@ -3,6 +3,7 @@ import { Menu } from "../models/menu.model";
 import { PopoverController, ToastController } from "ionic-angular";
 import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
 import {Dish} from "../models/dish.model";
+import {PointsService} from "../points.service";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class DishList implements OnInit{
 
 
   @Input() menu: Dish[];
-  constructor(public popoverCtrl: PopoverController, public toastCtrl: ToastController) {
+  constructor(public popoverCtrl: PopoverController, public toastCtrl: ToastController, private pointsService: PointsService) {
     console.log(this.menu);
   }
 
@@ -68,10 +69,11 @@ export class DishList implements OnInit{
     }
     let toast = this.toastCtrl.create({
       message: message + ' זכית ב-' + points + ' נקודות',
-      duration: 1500,
+      duration: 2000,
       cssClass: 'points-toast'
 
     });
     toast.present();
+    this.pointsService.addPoints(10);
   }
 }

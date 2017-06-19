@@ -13,10 +13,26 @@ export class HomePage implements OnInit{
 	public dishtype: string;
 	public menu;
 	public dishes;
+	public title;
 
   constructor(public navCtrl: NavController, private menuService: MenuService) {
   	this.dishtypes = ["Salad","Meat","Vegitrain","Pitiya","Addition"];
   	this.dishtype = "Meat";
+  	this.setTitle();
+  }
+
+  setTitle(){
+    var date = new Date();
+    var hour = date.getHours();
+    if(hour < 9){
+      this.title = "בוקר טוב !";
+      return;
+    }
+    if(hour < 17){
+      this.title = "צהריים טובים !";
+      return;
+    }
+    this.title = "ערב טוב !";
   }
 
   ngOnInit(){
