@@ -4,6 +4,7 @@ import { PopoverController } from "ionic-angular";
 import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
 import { RankingItem } from "../models/ranking-item.model";
 import { DishRanking } from "../models/dish-ranking.model";
+import { Dish } from "../models/dish.model";
 
 @Component({
   selector: 'dish-list',
@@ -11,24 +12,34 @@ import { DishRanking } from "../models/dish-ranking.model";
   inputs: ['menu']
 })
 export class DishList implements OnInit {
-  @Input() menu: Menu;
+  @Input() menu: Dish[];
   dishRanking: DishRanking[];
+
   constructor(public popoverCtrl: PopoverController) {
     console.log(this.menu);
   }
 
   ngOnInit() {
-    if (this.menu) {
-      console.log(this.menu);
-      this.dishRanking = this.menu.dishes.map(dish => {
-        let defaultRanking = [new RankingItem("מלח"), new RankingItem("שומניות"), new RankingItem("יבש")];
-        let ingredients = dish.ingredients.map(ingredient => new RankingItem(ingredient));
-        return {
-          dishId: dish.id,
-          rankingItems: defaultRanking.concat(ingredients)
-        };
-      });
-    }
+    this.menu.forEach(function (dish) {
+      if (dish.rank >= 0 && dish.rank < 30) {
+        dish.emoji = "/assets/emoji/unamused.png";
+      }
+      if (dish.rank > 30 && dish.rank < 60) {
+        dish.emoji = "/assets/emoji/best.png";
+      }
+      if (dish.rank > 60 && dish.rank <= 100) {
+        dish.emoji = "/assets/emoji/heart.png";
+      }
+    });
+    
+    this.dishRanking = this.menu.map(dish => {
+      let defaultRanking = [new RankingItem("מלח"), new RankingItem("שומניות"), new RankingItem("יבש")];
+      let ingredients = dish.ingredients.map(ingredient => new RankingItem(ingredient));
+      return {
+        dishId: dish.id,
+        rankingItems: defaultRanking.concat(ingredients)
+      };
+    });
   }
 
   presentPopover(popupEvent, dish) {

@@ -9,4 +9,5 @@ export class Dish {
 	isGlat: boolean;
 	isVegan: boolean;
 	isGlutenFree: boolean;
+	emoji: string;
 }
