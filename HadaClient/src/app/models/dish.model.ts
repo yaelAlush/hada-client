@@ -1,12 +1,13 @@
-import {DishType} from './dishtype.model';
-export class Dish{
+import { DishType } from './dishtype.model';
+export class Dish {
 	id: number;
 	picture: string;
 	name: string;
+	ingredients: string[];
+	rank: number;
 	description: string;
-  rank: number;
-  total: number;
-  likedCount: number;
+	total: number;
+	likedCount: number;
 	type: DishType;
 	isGlat: boolean;
 	isVegan: boolean;

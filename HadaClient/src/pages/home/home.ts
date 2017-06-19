@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController ,PopoverController} from 'ionic-angular';
-import {MenuService} from "../../app/menu.service";
+import { NavController, PopoverController } from 'ionic-angular';
+import { MenuService } from "../../app/menu.service";
 import _ from "lodash";
 //import {DishTypes} from '../../app/models/dishtypes.model';
 
@@ -35,11 +35,10 @@ export class HomePage implements OnInit{
     this.title = "ערב טוב !";
   }
 
-  ngOnInit(){
-    this.menuService.getMenu().then(menu =>
-    {
+  ngOnInit() {
+    this.menuService.getMenu().then(menu => {
       this.menu = menu;
-      this.dishes= _.groupBy(menu.dishes, "type");
+      this.dishes = _.groupBy(menu.dishes, "type");
       console.log(this.dishes);
     });
   }

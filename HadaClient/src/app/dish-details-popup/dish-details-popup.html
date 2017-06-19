@@ -20,14 +20,18 @@
   <ion-list *ngSwitchCase="'details'">
     <ion-list>
       <img [src]="dishDetails.picture">
-      <div>מצרכים: {{dishDetails.name}}</div>
+      <div>מצרכים: {{dishDetails.ingredients}}</div>
     </ion-list>
   </ion-list>
   <ion-list *ngSwitchCase="'ranking'">
     <ion-list>
-      <ion-list-header>{{dishDetails.name}} דירוג:{{dishDetails.rank}}</ion-list-header>
-      <img [src]="dishDetails.picture">
-      <div>מצרכים: {{dishDetails.name}}</div>
+      <ion-item *ngFor="let rankItem of rankingList.rankingItems"
+      class="ingredient-item"
+            (swipeleft)="swipeleft($event, rankItem)"
+            (swiperight)="swiperight($event, rankItem)"
+            [ngClass]="{'itemSlidingAnimationRight': rankItem.liked && rankItem.swipedright,'itemSlidingAnimation': rankItem.liked == false && rankItem.swipedleft, 'liked': rankItem.liked, 'dislike': rankItem.liked == false}">
+        {{rankItem.name}}
+      </ion-item>
     </ion-list>
   </ion-list>
 </div>
