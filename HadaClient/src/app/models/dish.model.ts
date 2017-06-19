@@ -5,6 +5,9 @@ export class Dish {
 	name: string;
 	ingredients: string[];
 	rank: number;
+	description: string;
+	total: number;
+	likedCount: number;
 	type: DishType;
 	isGlat: boolean;
 	isVegan: boolean;
