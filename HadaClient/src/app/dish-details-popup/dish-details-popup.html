@@ -1,4 +1,11 @@
-<div padding>
+<div>
+  <ion-title>
+    {{dishDetails.name}}
+  </ion-title>
+  דירוג:{{dishDetails.rank}}
+</div>
+
+<div>
   <ion-segment [(ngModel)]="dishSegments">
     <ion-segment-button value="details">
       מידע
@@ -12,7 +19,6 @@
 <div [ngSwitch]="dishSegments">
   <ion-list *ngSwitchCase="'details'">
     <ion-list>
-      <ion-list-header>{{dishDetails.name}} דירוג:{{dishDetails.rank}}</ion-list-header>
       <img [src]="dishDetails.picture">
       <div>מצרכים: {{dishDetails.name}}</div>
     </ion-list>

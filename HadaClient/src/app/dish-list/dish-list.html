@@ -1,5 +1,5 @@
 <ion-list *ngIf="menu">
-  <ion-item *ngFor="let dish of menu">
+  <ion-item *ngFor="let dish of menu" (click)="presentPopover($event,dish)">
     <ion-thumbnail item-start>
       <img [src]="dish.picture">
     </ion-thumbnail>
