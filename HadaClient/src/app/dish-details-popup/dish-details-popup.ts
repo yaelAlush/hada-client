@@ -9,14 +9,14 @@ import { Dish } from "../models/dish.model";
 export class DishDetailsPopupComponent implements OnInit {
   dishDetails: Dish;
   dishSegments: string = "details"
-  rankingList: Array<string>;
+  rankingList: string[] = ["מלח", "יותר מידי שמן", "יבש"];
 
   constructor(public viewCtrl: ViewController) {
     this.dishDetails = this.viewCtrl.data;
   }
 
   ngOnInit() {
-    this.rankingList=this.dishDetails.description.split(",");
+    this.rankingList = this.rankingList.concat(this.dishDetails.ingredients);
   }
 
   close() {

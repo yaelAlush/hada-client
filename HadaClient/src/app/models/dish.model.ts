@@ -3,7 +3,7 @@ export class Dish{
 	id: number;
 	picture: string;
 	name: string;
-	description: string;
+	ingredients: string[];
 	rank: number;
 	type: DishType;
 	isGlat: boolean;
