@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Menu } from "../models/menu.model";
 import { PopoverController } from "ionic-angular";
 import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
+import {Dish} from "../models/dish.model";
 
 
 @Component({
@@ -9,10 +10,26 @@ import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-po
   templateUrl: 'dish-list.html',
   inputs:['menu']
 })
-export class DishList {
-  @Input() menu: Menu;
+export class DishList implements OnInit{
+
+
+  @Input() menu: Dish[];
   constructor(public popoverCtrl: PopoverController) {
     console.log(this.menu);
+  }
+
+  ngOnInit(): void {
+    this.menu.forEach(function(dish){
+      if(dish.rank >= 0 && dish.rank <30){
+        dish.emoji ="/assets/emoji/unamused.png";
+      }
+      if(dish.rank > 30 && dish.rank <60){
+        dish.emoji ="/assets/emoji/best.png";
+      }
+      if(dish.rank > 60 && dish.rank <=100){
+        dish.emoji ="/assets/emoji/heart.png";
+      }
+    })
   }
 
   presentPopover(popupEvent,dish) {
