@@ -15,6 +15,7 @@ import { DishDetailsPopupComponent } from './dish-details-popup/dish-details-pop
 import { DishList } from '../app/dish-list/dish-list.component';
 import { MenuService } from "./menu.service";
 import { PointsService } from "./points.service";
+import {PrizesService} from "./prizes.service";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PointsService } from "./points.service";
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     MenuService,
-    PointsService
+    PointsService,
+    PrizesService
   ]
 })
 export class AppModule { }

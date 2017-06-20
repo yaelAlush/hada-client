@@ -1,0 +1,32 @@
+[
+  {
+    "name": "לעקוף את התור",
+    "points": 800,
+    "pic": "/assets/prizes/line.jpg"
+  },
+  {
+    "name": "ארטיק",
+    "points": 100,
+    "pic": "/assets/prizes/artik.jpg"
+  },
+  {
+    "name": "מילקי",
+    "points": 100,
+    "pic": "/assets/prizes/milki.jpg"
+  },
+  {
+    "name": "מנה לבחירתך",
+    "points": 3000,
+    "pic": "/assets/prizes/shushi.jpg"
+  },
+  {
+    "name": "חדא סאלים",
+    "points": 1500,
+    "pic": "/assets/prizes/shidan.jpg"
+  },
+  {
+    "name": "לאכול עם נתי",
+    "points": 4000,
+    "pic": "/assets/prizes/chef.jpg"
+  }
+]

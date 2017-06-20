@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import {PrizesPage} from "../pages/prizes/prizes";
 @Component({
   templateUrl: 'app.html'
 })
@@ -31,5 +32,8 @@ export class MyApp {
 
   openMenu(type) {
     this.nav.setRoot(HomePage,{ menuType: type });
+  }
+  openPrizes(){
+    this.nav.setRoot(PrizesPage);
   }
 }

@@ -3,34 +3,19 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{title}}</ion-title>
-    <ion-title class="menu-type">{{menuType}}</ion-title>
+    <ion-title>יש לך {{points}} נקודות!</ion-title>
   </ion-navbar>
-  <ion-toolbar class="toolbar statusbar-padding" no-border-top="" *ngIf="existingDishTypes">
-    <ion-segment [(ngModel)]="dishtype">
-      <ion-segment-button value="{{type}}" *ngFor="let type of existingDishTypes">
-        {{type}}
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <div [ngSwitch]="dishtype" *ngIf="dishes && existingDishTypes">
-    <ion-list *ngSwitchCase="'בשר'">
-      <dish-list [menu]="dishes['בשר']"></dish-list>
-    </ion-list>
-    <ion-list *ngSwitchCase="'תוספות'">
-      <dish-list [menu]="dishes['תוספות']"></dish-list>
-    </ion-list>
-    <ion-list *ngSwitchCase="'סלטים'">
-      <dish-list [menu]="dishes['סלטים']"></dish-list>
-    </ion-list>
-    <ion-list *ngSwitchCase="'צמחוני'">
-      <dish-list [menu]="dishes['צמחוני']"></dish-list>
-    </ion-list>
-    <ion-list *ngSwitchCase="'פיתייה'">
-      <dish-list [menu]="dishes['פיתייה']"></dish-list>
-    </ion-list>
-  </div>
+  <ion-list class="prize-list">
+    <ion-item *ngFor="let prize of prizes">
+      <ion-thumbnail item-start>
+        <img [src]="prize.pic">
+      </ion-thumbnail>
+      <h2>{{prize.name}}</h2>
+      <p>{{prize.points}}</p>
+      <button ion-button outline (click)="getPrize(prize)" [disabled]="isDisabled(prize)">בחר</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

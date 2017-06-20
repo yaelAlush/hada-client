@@ -5,25 +5,22 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class PointsService {
   private apiEndpoint: string;
-  public points: number;
+  public points: number = 70;
 
   constructor(private http: Http) {
     this.apiEndpoint = '/assets/points.json';
   }
 
   getPoints(){
-    if(this.points){
-      return Promise.resolve(this.points);
-    }
-    var url =`${this.apiEndpoint}`;
-    return this.http.get(url)
-      .toPromise()
-      .then(response => response.json())
-      .catch(PointsService.handleError);
+    return this.points;
   }
 
   addPoints(points){
     this.points += points;
+  }
+
+  subPoints(points){
+    this.points -= points;
   }
 
   private static handleError (error: Response | any) {
