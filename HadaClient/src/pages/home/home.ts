@@ -41,7 +41,7 @@ export class HomePage implements OnInit {
     }
     if (hour < 17) {
       if (!this.menuType) {
-        this.menuType = "ארוחת צהרים";
+        this.menuType = "ארוחת צהריים";
       }
       this.title = "צהריים טובים !";
       return;
