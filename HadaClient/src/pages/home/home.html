@@ -3,7 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{title}}</ion-title>
+    <ion-grid class="logo-grid">
+      <ion-row align-items-start>
+        <ion-col>
+          <ion-title>{{title}}</ion-title>
+        </ion-col>
+        <ion-col class="logo-col">
+          <img class="logo-img" src="../../assets/icon/logo.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
   <ion-toolbar class="toolbar statusbar-padding" no-border-top="" (load)="render()">
     <ion-segment [(ngModel)]="dishtype">
