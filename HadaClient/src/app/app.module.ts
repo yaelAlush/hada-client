@@ -6,7 +6,7 @@ import { HttpModule } from "@angular/http";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-// import { PrizesPage } from "../pages/prizes/prizes";
+import { PrizesPage } from "../pages/prizes/prizes";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +20,7 @@ import { PointsService } from "./points.service";
   declarations: [
     MyApp,
     HomePage,
-    // PrizesPage,
+    PrizesPage,
     DishDetailsPopupComponent,
     DishList
   ],
@@ -34,7 +34,7 @@ import { PointsService } from "./points.service";
   entryComponents: [
     MyApp,
     HomePage,
-    // PrizesPage,
+    PrizesPage,
     DishDetailsPopupComponent
   ],
   providers: [
