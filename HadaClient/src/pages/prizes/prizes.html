@@ -1,22 +1,22 @@
-<ion-header *ngIf="dishes && existingDishTypes">
+<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>{{title}}</ion-title>
+    <ion-title class="menu-type">{{menuType}}</ion-title>
   </ion-navbar>
-  <ion-toolbar class="toolbar statusbar-padding" no-border-top="" (load)="render()">
+  <ion-toolbar class="toolbar statusbar-padding" no-border-top="" *ngIf="existingDishTypes">
     <ion-segment [(ngModel)]="dishtype">
-      <ion-segment-button value="{{type}}" *ngFor="let type of existingDishTypes" >
+      <ion-segment-button value="{{type}}" *ngFor="let type of existingDishTypes">
         {{type}}
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding *ngIf="dishes && existingDishTypes">
-  <div class="menu-type">{{menuType}}</div>
-  <div [ngSwitch]="dishtype">
+<ion-content padding>
+  <div [ngSwitch]="dishtype" *ngIf="dishes && existingDishTypes">
     <ion-list *ngSwitchCase="'בשר'">
       <dish-list [menu]="dishes['בשר']"></dish-list>
     </ion-list>

@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/v2/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -16,70 +14,61 @@
 // automatically applied to the <body> element in the app.
 @-webkit-keyframes slidingAnimation {
   0% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
-
   50% {
-    transform: translate3d(-70px,0,0);
-    -webkit-transform: translate3d(-70px,0,0);
+    transform: translate3d(-70px, 0, 0);
+    -webkit-transform: translate3d(-70px, 0, 0);
   }
-
   100% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 keyframes slidingAnimation {
   0% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
-
   50% {
-    transform: translate3d(-70px,0,0);
-    -webkit-transform: translate3d(-70px,0,0);
+    transform: translate3d(-70px, 0, 0);
+    -webkit-transform: translate3d(-70px, 0, 0);
   }
-
   100% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
-
 @-webkit-keyframes slidingAnimationRight {
   0% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
-
   50% {
-    transform: translate3d(70px,0,0);
-    -webkit-transform: translate3d(70px,0,0);
+    transform: translate3d(70px, 0, 0);
+    -webkit-transform: translate3d(70px, 0, 0);
   }
-
   100% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 keyframes slidingAnimationRight {
   0% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
-
   50% {
-    transform: translate3d(70px,0,0);
-    -webkit-transform: translate3d(70px,0,0);
+    transform: translate3d(70px, 0, 0);
+    -webkit-transform: translate3d(70px, 0, 0);
   }
-
   100% {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
@@ -97,25 +86,25 @@ keyframes slidingAnimationRight {
   animation-duraton: 1000ms;
 }
 
-.liked{
+.liked {
   border: 1px solid;
   border-color: #32db64 !important;
   border-radius: 10px;
   background-color: #dcffd2;
 }
 
-.dislike{
+.dislike {
   border: 1px solid;
   border-color: #e13838 !important;
   border-radius: 10px;
   background-color: #ffd2d2;
 }
 
-.menu img{
+.menu img {
   border-radius: 10px;
 }
 
-.dish-item{
+.dish-item {
   margin: 10px 0;
   border-bottom: 1px solid #dedede;
 }
@@ -124,51 +113,65 @@ keyframes slidingAnimationRight {
   border-bottom: 0px !important;
 }
 
-.emoji{
+.emoji {
   text-align: right;
 }
 
-.details-emoji{
+.details-emoji {
   text-align: center;
 }
 
-.emoji img, .details-emoji img{
+.emoji img,
+.details-emoji img {
   width: 25px;
   height: 25px;
 }
 
-.dish-rank{
+.dish-rank {
   font-size: 12px;
   font-weight: bold;
 }
 
-.dish-like-text{
+.dish-like-text {
   font-size: 11px;
 }
 
-.dish-details ion-col{
+.dish-details ion-col {
   max-width: 50%;
 }
 
-.dish-details p{
+.dish-details p {
   overflow: hidden;
   white-space: initial;
 }
 
-.points-toast{
+.points-toast {
   text-align: center;
   direction: rtl;
 }
 
-,toolbar-title{
-   text-align: right;
-   direction: rtl;
- }
+toolbar-title {
+  text-align: right;
+  direction: rtl;
+}
 
- .popover-content{
-   padding: 10px;
- }
+.popover-content {
+  padding: 10px;
+}
 
- .popover-content .title{
-   text-align: center;
- }
+.popover-content .title {
+  text-align: center;
+}
+
+page-home {
+  ion-header {
+    min-height: 112px;
+  }
+  ion-content {
+    top: 112px;
+  }
+  .fixed-content,
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+}

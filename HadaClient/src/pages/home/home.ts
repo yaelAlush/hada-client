@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 import { MenuService } from "../../app/menu.service";
 import _ from "lodash";
 
@@ -8,6 +8,10 @@ import _ from "lodash";
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit {
+  render(): void {
+    this.isRendered = true;
+  }
+
   public dishtypes: string[];
   public existingDishTypes: string[]
   public dishtype: string;
@@ -15,8 +19,10 @@ export class HomePage implements OnInit {
   public menu;
   public dishes;
   public title;
+  private isRendered: boolean;
 
-  constructor(public navCtrl: NavController, private menuService: MenuService, public navParams: NavParams) {
+  constructor(private menuService: MenuService, public navParams: NavParams) {
+    this.isRendered = false;
     this.menuType = this.navParams.get('menuType');
     this.dishtypes = ["סלטים", "בשר", "צמחוני", "פיתייה", "תוספות"];
     this.dishtype = "סלטים";
