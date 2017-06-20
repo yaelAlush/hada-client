@@ -5,18 +5,17 @@
     </button>
     <ion-title>{{title}}</ion-title>
   </ion-navbar>
- <ion-toolbar class="toolbar statusbar-padding" no-border-top="">
-      <ion-segment [(ngModel)]="dishtype">
-       <ion-segment-button value="{{type}}" *ngFor="let type of dishtypes">
-      {{type}}
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
-
+  <ion-toolbar class="toolbar statusbar-padding" no-border-top="" *ngIf="existingDishTypes">
+    <ion-segment [(ngModel)]="dishtype">
+      <ion-segment-button value="{{type}}" *ngFor="let type of existingDishTypes">
+        {{type}}
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <div [ngSwitch]="dishtype" *ngIf="dishes">
+  <div [ngSwitch]="dishtype" *ngIf="dishes && existingDishTypes">
     <ion-list *ngSwitchCase="'Meat'">
       <dish-list [menu]="dishes['Meat']"></dish-list>
     </ion-list>

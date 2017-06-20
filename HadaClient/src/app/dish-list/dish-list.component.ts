@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PopoverController, ToastController } from "ionic-angular";
 import { DishDetailsPopupComponent } from "../dish-details-popup/dish-details-popup";
-import {PointsService} from "../points.service";
+import { PointsService } from "../points.service";
 import { Dish } from "../models/dish.model";
 
 @Component({
@@ -17,18 +17,20 @@ export class DishList implements OnInit {
   }
 
   ngOnInit(): void {
-    this.menu.forEach(function (dish) {
-      dish.rank = Math.round((dish.likedCount / dish.total) * 100);
-      if (dish.rank >= 0 && dish.rank < 30) {
-        dish.emoji = "/assets/emoji/unamused.png";
-      }
-      if (dish.rank > 30 && dish.rank < 60) {
-        dish.emoji = "/assets/emoji/best.png";
-      }
-      if (dish.rank > 60 && dish.rank <= 100) {
-        dish.emoji = "/assets/emoji/heart.png";
-      }
-    });
+    if (this.menu) {
+      this.menu.forEach(function (dish) {
+        dish.rank = Math.round((dish.likedCount / dish.total) * 100);
+        if (dish.rank >= 0 && dish.rank < 30) {
+          dish.emoji = "/assets/emoji/unamused.png";
+        }
+        if (dish.rank > 30 && dish.rank < 60) {
+          dish.emoji = "/assets/emoji/best.png";
+        }
+        if (dish.rank > 60 && dish.rank <= 100) {
+          dish.emoji = "/assets/emoji/heart.png";
+        }
+      });
+    }
   }
 
   presentPopover(popupEvent, dish) {
@@ -43,7 +45,7 @@ export class DishList implements OnInit {
     dish.swipedleft = true;
     setTimeout(function () {
       dish.swipedleft = false;
-    },1000);
+    }, 1000);
     this.presentToast(10, false);
 
   }
@@ -53,16 +55,16 @@ export class DishList implements OnInit {
     dish.swipedright = true;
     setTimeout(function () {
       dish.swipedright = false;
-    },1000);
+    }, 1000);
     this.presentToast(10, true);
 
   }
 
   presentToast(points, liked) {
     var message;
-    if(liked){
+    if (liked) {
       message = "שמחים שאהבת :)"
-    } else{
+    } else {
       message = "תודה על הדירוג!"
     }
     let toast = this.toastCtrl.create({
