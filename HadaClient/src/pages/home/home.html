@@ -5,8 +5,8 @@
     </button>
     <ion-grid class="logo-grid">
       <ion-row align-items-start>
-        <ion-col>
-          <ion-title>{{title}}</ion-title>
+        <ion-col align-self-center>
+          <ion-title>{{menuType}}</ion-title>
         </ion-col>
         <ion-col class="logo-col">
           <img class="logo-img" src="../../assets/icon/logo.png">
@@ -24,7 +24,7 @@
 </ion-header>
 
 <ion-content padding *ngIf="dishes && existingDishTypes">
-  <div class="menu-type">{{menuType}}</div>
+  <!--<div class="menu-type">{{menuType}}</div>-->
   <div [ngSwitch]="dishtype">
     <ion-list *ngSwitchCase="'בשר'">
       <dish-list [menu]="dishes['בשר']"></dish-list>
