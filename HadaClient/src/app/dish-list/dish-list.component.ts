@@ -18,19 +18,23 @@ export class DishList implements OnInit {
 
   ngOnInit(): void {
     if (this.menu) {
-      this.menu.forEach(function (dish) {
-        dish.rank = Math.round((dish.likedCount / dish.total) * 100);
-        if (dish.rank >= 0 && dish.rank < 30) {
-          dish.emoji = "/assets/emoji/unamused.png";
-        }
-        if (dish.rank > 30 && dish.rank < 60) {
-          dish.emoji = "/assets/emoji/best.png";
-        }
-        if (dish.rank > 60 && dish.rank <= 100) {
-          dish.emoji = "/assets/emoji/heart.png";
-        }
-      });
+      this.updateRanks();
     }
+  }
+
+  updateRanks() {
+    this.menu.forEach(function (dish) {
+      dish.rank = Math.round((dish.likedCount / dish.total) * 100);
+      if (dish.rank >= 0 && dish.rank < 30) {
+        dish.emoji = "/assets/emoji/unamused.png";
+      }
+      if (dish.rank > 30 && dish.rank < 60) {
+        dish.emoji = "/assets/emoji/best.png";
+      }
+      if (dish.rank > 60 && dish.rank <= 100) {
+        dish.emoji = "/assets/emoji/heart.png";
+      }
+    });
   }
 
   presentPopover(popupEvent, dish) {
@@ -42,22 +46,25 @@ export class DishList implements OnInit {
 
   swipeleft($event, dish) {
     dish.liked = false;
+    dish.total++;
     dish.swipedleft = true;
     setTimeout(function () {
       dish.swipedleft = false;
     }, 1000);
     this.presentToast(10, false);
-
+    this.updateRanks();
   }
 
   swiperight($event, dish) {
     dish.liked = true;
+    dish.total++;
+    dish.likedCount++;
     dish.swipedright = true;
     setTimeout(function () {
       dish.swipedright = false;
     }, 1000);
     this.presentToast(10, true);
-
+    this.updateRanks();
   }
 
   presentToast(points, liked) {
