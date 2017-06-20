@@ -18,8 +18,8 @@ export class HomePage implements OnInit {
 
   constructor(public navCtrl: NavController, private menuService: MenuService, public navParams: NavParams) {
     this.menuType = this.navParams.get('menuType');
-    this.dishtypes = ["Salad", "Meat", "Vegitrain", "Pitiya", "Addition"];
-    this.dishtype = "Salad";
+    this.dishtypes = ["סלטים", "בשר", "צמחוני", "פיתייה", "תוספות"];
+    this.dishtype = "סלטים";
     this.setTitle();
   }
 
@@ -28,20 +28,20 @@ export class HomePage implements OnInit {
     var hour = date.getHours();
     if (hour < 9) {
       if (!this.menuType) {
-        this.menuType = "Breakfast";
+        this.menuType = "ארוחת בוקר";
       }
       this.title = "בוקר טוב !";
       return;
     }
     if (hour < 17) {
       if (!this.menuType) {
-        this.menuType = "Lunch";
+        this.menuType = "ארוחת צהרים";
       }
       this.title = "צהריים טובים !";
       return;
     }
     if (!this.menuType) {
-      this.menuType = "Dinner";
+      this.menuType = "ארוחת ערב";
     }
     this.title = "ערב טוב !";
   }

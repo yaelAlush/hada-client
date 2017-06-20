@@ -4,6 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>{{title}}</ion-title>
+    <ion-title class="menu-type">{{menuType}}</ion-title>
   </ion-navbar>
   <ion-toolbar class="toolbar statusbar-padding" no-border-top="" *ngIf="existingDishTypes">
     <ion-segment [(ngModel)]="dishtype">
@@ -16,20 +17,20 @@
 
 <ion-content padding>
   <div [ngSwitch]="dishtype" *ngIf="dishes && existingDishTypes">
-    <ion-list *ngSwitchCase="'Meat'">
-      <dish-list [menu]="dishes['Meat']"></dish-list>
+    <ion-list *ngSwitchCase="'בשר'">
+      <dish-list [menu]="dishes['בשר']"></dish-list>
     </ion-list>
-    <ion-list *ngSwitchCase="'Addition'">
-      <dish-list [menu]="dishes['Addition']"></dish-list>
+    <ion-list *ngSwitchCase="'תוספות'">
+      <dish-list [menu]="dishes['תוספות']"></dish-list>
     </ion-list>
-    <ion-list *ngSwitchCase="'Salad'">
-      <dish-list [menu]="dishes['Salad']"></dish-list>
+    <ion-list *ngSwitchCase="'סלטים'">
+      <dish-list [menu]="dishes['סלטים']"></dish-list>
     </ion-list>
-    <ion-list *ngSwitchCase="'Vegitrain'">
-      <dish-list [menu]="dishes['Vegitrain']"></dish-list>
+    <ion-list *ngSwitchCase="'צמחוני'">
+      <dish-list [menu]="dishes['צמחוני']"></dish-list>
     </ion-list>
-    <ion-list *ngSwitchCase="'Pitiya'">
-      <dish-list [menu]="dishes['Pitiya']"></dish-list>
+    <ion-list *ngSwitchCase="'פיתייה'">
+      <dish-list [menu]="dishes['פיתייה']"></dish-list>
     </ion-list>
   </div>
 </ion-content>

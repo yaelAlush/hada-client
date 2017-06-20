@@ -17,7 +17,7 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen) {
     this.initializeApp();
-    this.menuTypes = ["Breakfast", "Lunch", "Dinner"];
+    this.menuTypes = ["ארוחת בוקר", "ארוחת צהריים", "ארוחת ערב"];
   }
 
   initializeApp() {
@@ -30,7 +30,6 @@ export class MyApp {
   }
 
   openMenu(type) {
-    // this.nav.push(HomePage, { menuType: type });
     this.nav.setRoot(HomePage,{ menuType: type });
   }
 }

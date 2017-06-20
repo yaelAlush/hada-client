@@ -1,16 +1,16 @@
 [{
     "id": 1,
     "date": "21/06/2017",
-    "type": "Breakfast",
+    "type": "ארוחת בוקר",
     "dishes": [{
         "id": 222,
         "picture": "assets/dishes/thina.jpg",
-        "name": "thina",
-        "description": "best thina!",
+        "name": "טחינה",
+        "description": "הטחינה המושלמת!",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 200,
         "likedCount": 40,
-        "type": "Salad",
+        "type": "סלטים",
         "isGlat": false,
         "isVegan": true,
         "isGlutenFree": true
@@ -18,12 +18,12 @@
       {
         "id": 333,
         "picture": "assets/dishes/salad.jpg",
-        "name": "salad",
-        "description": "many fresh vegetables",
+        "name": "סלט",
+        "description": "הרבה ירקות טריים",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 100,
         "likedCount": 75,
-        "type": "Salad",
+        "type": "סלטים",
         "isGlat": true,
         "isVegan": true,
         "isGlutenFree": true
@@ -31,12 +31,12 @@
       {
         "id": 666,
         "picture": "assets/dishes/pashtida.jpg",
-        "name": "pashtida",
-        "description": "haftaha",
+        "name": "פשטידה",
+        "description": "הפתעה",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 100,
         "likedCount": 89,
-        "type": "Vegitrain",
+        "type": "צמחוני",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -44,12 +44,12 @@
       {
         "id": 777,
         "picture": "assets/dishes/shniteltiras.jpg",
-        "name": "shnitzel tiras",
-        "description": "like you always wanted",
+        "name": "שניצל תירס",
+        "description": "כמו שתמיד רציתם",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 400,
         "likedCount": 400,
-        "type": "Vegitrain",
+        "type": "צמחוני",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -57,12 +57,12 @@
       {
         "id": 888,
         "picture": "assets/dishes/soup.jpg",
-        "name": "soup",
-        "description": "water",
+        "name": "מרק",
+        "description": "מים",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 90,
         "likedCount": 18,
-        "type": "Addition",
+        "type": "תוספות",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": true
@@ -70,12 +70,12 @@
       {
         "id": 999,
         "picture": "assets/dishes/falafel.jpg",
-        "name": "falafel",
-        "description": "with many additions",
+        "name": "פלאפל",
+        "description": "עם הרבה תוספות",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 14,
         "likedCount": 2,
-        "type": "Pitiya",
+        "type": "פיתייה",
         "isGlat": true,
         "isVegan": false,
         "isGlutenFree": false
@@ -83,12 +83,12 @@
       {
         "id": 1010,
         "picture": "assets/dishes/shawarma.jpg",
-        "name": "shawarma",
-        "description": "very tasty",
+        "name": "שווארמה",
+        "description": "ממש טעים",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 200,
         "likedCount": 180,
-        "type": "Pitiya",
+        "type": "פיתייה",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -98,16 +98,16 @@
   {
     "id": 2,
     "date": "21/06/2017",
-    "type": "Lunch",
+    "type": "ארוחת צהריים",
     "dishes": [{
         "id": 111,
         "picture": "assets/dishes/chicken.jpg",
-        "name": "shnitzel",
-        "description": "fries chicken",
+        "name": "שניצל",
+        "description": "עו מטוגן",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 100,
         "likedCount": 80,
-        "type": "Meat",
+        "type": "בשר",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -115,12 +115,12 @@
       {
         "id": 222,
         "picture": "assets/dishes/thina.jpg",
-        "name": "thina",
-        "description": "best thina!",
+        "name": "טחינה",
+        "description": "הטחינה המושלמת!",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 200,
         "likedCount": 40,
-        "type": "Salad",
+        "type": "סלטים",
         "isGlat": false,
         "isVegan": true,
         "isGlutenFree": true
@@ -128,12 +128,12 @@
       {
         "id": 333,
         "picture": "assets/dishes/salad.jpg",
-        "name": "salad",
-        "description": "many fresh vegetables",
+        "name": "סלט",
+        "description": "הרבה ירקות טריים",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 100,
         "likedCount": 75,
-        "type": "Salad",
+        "type": "סלטים",
         "isGlat": true,
         "isVegan": true,
         "isGlutenFree": true
@@ -141,12 +141,12 @@
       {
         "id": 444,
         "picture": "assets/dishes/kebab.jpg",
-        "name": "kebab",
-        "description": "best kebab",
+        "name": "קבב",
+        "description": "קבב טוב",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 2,
         "likedCount": 2,
-        "type": "Meat",
+        "type": "בשר",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -154,12 +154,12 @@
       {
         "id": 555,
         "picture": "assets/dishes/memole.jpg",
-        "name": "memole",
-        "description": "memole like in home",
+        "name": "ממולא",
+        "description": "ממש כמו בבית",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 127,
         "likedCount": 34,
-        "type": "Meat",
+        "type": "בשר",
         "isGlat": true,
         "isVegan": false,
         "isGlutenFree": false
@@ -167,12 +167,12 @@
       {
         "id": 666,
         "picture": "assets/dishes/pashtida.jpg",
-        "name": "pashtida",
-        "description": "haftaha",
+        "name": "פשטידה",
+        "description": "הפתעה",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 100,
         "likedCount": 89,
-        "type": "Vegitrain",
+        "type": "צמחוני",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -180,12 +180,12 @@
       {
         "id": 777,
         "picture": "assets/dishes/shniteltiras.jpg",
-        "name": "shnitzel tiras",
-        "description": "like you always wanted",
+        "name": "שניצל תירס",
+        "description": "כמו שתמיד רציתם",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 400,
         "likedCount": 400,
-        "type": "Vegitrain",
+        "type": "צמחוני",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -193,12 +193,12 @@
       {
         "id": 888,
         "picture": "assets/dishes/soup.jpg",
-        "name": "soup",
-        "description": "water",
+        "name": "מרק",
+        "description": "מים",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 90,
         "likedCount": 18,
-        "type": "Addition",
+        "type": "תוספות",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": true
@@ -206,12 +206,12 @@
       {
         "id": 999,
         "picture": "assets/dishes/falafel.jpg",
-        "name": "falafel",
-        "description": "with many additions",
+        "name": "פלאפל",
+        "description": "עם הרבה תוספות",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 14,
         "likedCount": 6,
-        "type": "Pitiya",
+        "type": "פיתייה",
         "isGlat": true,
         "isVegan": false,
         "isGlutenFree": false
@@ -219,12 +219,12 @@
       {
         "id": 1010,
         "picture": "assets/dishes/shawarma.jpg",
-        "name": "shawarma",
-        "description": "very tasty",
+        "name": "שווארמה",
+        "description": "ממש טעים",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 200,
         "likedCount": 180,
-        "type": "Pitiya",
+        "type": "פיתייה",
         "isGlat": false,
         "isVegan": false,
         "isGlutenFree": false
@@ -235,25 +235,20 @@
   {
     "id": 1,
     "date": "21/06/2017",
-    "type": "Dinner",
+    "type": "ארוחת ערב",
     "dishes": [{
         "id": 222,
         "picture": "assets/dishes/thina.jpg",
-        "name": "thina",
-        "description": "best thina!",
+        "name": "טחינה",
+        "description": "הכי טובה",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 200,
         "likedCount": 40,
-        "type": "Salad",
+        "type": "סלטים",
         "isGlat": false,
         "isVegan": true,
         "isGlutenFree": true
       }
     ]
   }
-
-
-
-
-
 ]
