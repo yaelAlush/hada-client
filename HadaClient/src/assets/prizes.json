@@ -1,5 +1,10 @@
 [
   {
+    "name": "ארוחה בחדא סאלים",
+    "points": 1500,
+    "pic": "/assets/prizes/shidan.jpg"
+  },
+  {
     "name": "לעקוף את התור",
     "points": 800,
     "pic": "/assets/prizes/line.jpg"
@@ -20,12 +25,7 @@
     "pic": "/assets/prizes/shushi.jpg"
   },
   {
-    "name": "חדא סאלים",
-    "points": 1500,
-    "pic": "/assets/prizes/shidan.jpg"
-  },
-  {
-    "name": "לאכול עם נתי",
+    "name": "ארוחה עם נתי",
     "points": 4000,
     "pic": "/assets/prizes/chef.jpg"
   }
