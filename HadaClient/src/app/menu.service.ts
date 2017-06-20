@@ -21,7 +21,7 @@ export class MenuService {
         let menus = response.json() as Menu[];
         let wantedMenu = menus.find(menu=>menu.type==type);
         this.dishRanking = wantedMenu.dishes.map(dish => {
-          let defaultRanking = [new RankingItem("מלח"), new RankingItem("שומניות"), new RankingItem("יבש")];
+          let defaultRanking = [new RankingItem("מלח"), new RankingItem("שומניות"), new RankingItem("מידת עשייה")];
           let ingredients = dish.ingredients.map(ingredient => new RankingItem(ingredient));
           return {
             dishId: dish.id,

@@ -13,9 +13,17 @@
       <ion-thumbnail item-start>
         <img [src]="prize.pic">
       </ion-thumbnail>
-      <h2>{{prize.name}}</h2>
-      <p>{{prize.points}}</p>
-      <button ion-button outline (click)="getPrize(prize)" [disabled]="isDisabled(prize)">בחר</button>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>{{prize.name}}</h2>
+            <p>{{prize.points}}</p>
+          </ion-col>
+          <ion-col class="choose">
+            <button ion-button (click)="getPrize(prize)" [disabled]="isDisabled(prize)">בחר</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -12,10 +12,12 @@ export class DishDetailsPopupComponent {
   dishDetails: Dish;
   dishSegments: string = "details"
   rankingList: DishRanking;
+  ingridients: string;
 
   constructor(public viewCtrl: ViewController, private menuService: MenuService) {
     this.dishDetails= this.viewCtrl.data;
     this.rankingList = this.menuService.dishRanking.find(ranking=>ranking.dishId==this.dishDetails.id);
+    this.ingridients = this.dishDetails.ingredients.join(', ');
   }
 
   swipeleft($event, ingredient) {
