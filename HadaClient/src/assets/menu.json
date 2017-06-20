@@ -103,7 +103,7 @@
         "id": 111,
         "picture": "assets/dishes/chicken.jpg",
         "name": "שניצל",
-        "description": "עו מטוגן",
+        "description": "עוף מטוגן",
         "ingredients": ["גזר", "מלפפון", "עגבניה"],
         "total": 100,
         "likedCount": 80,
@@ -174,7 +174,7 @@
         "likedCount": 89,
         "type": "צמחוני",
         "isGlat": false,
-        "isVegan": false,
+        "isVegan": true,
         "isGlutenFree": false
       },
       {

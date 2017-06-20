@@ -13,6 +13,11 @@
         <ion-col>
           <h2>{{dish.name}}</h2>
           <p>{{dish.description}}</p>
+          <div class="dish-props">
+            <img src="/assets/props/glat.png" *ngIf="dish.isGlat">
+            <img src="/assets/props/gf.png" *ngIf="dish.isGlutenFree">
+            <img src="/assets/props/veg.png" *ngIf="dish.isVegan">
+          </div>
         </ion-col>
         <ion-col class="emoji" align-self-center>
           <img [src]="dish.emoji" *ngIf="dish.emoji">
